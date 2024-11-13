@@ -51,40 +51,44 @@
     text-align: inherit;
   }
   .cs-button-solid {
-    z-index: 1;
-    position: relative;
-    display: inline-block;
-    background-color: var(--primary);
-    width: auto;
-    padding: 0 1.875rem;
-    text-decoration: none;
-    text-transform: uppercase;
     font-size: 1rem;
-    line-height: 3.125em;
-    font-weight: bold;
-    color: #000;
-    transition: color 0.3s;
-    transition-delay: 0.1s;
-    text-align: center;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 8vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0;
+    color: #fff;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    border-radius: 8px;
+    border: none;
   }
   .cs-button-solid:hover {
-    color: #fff;
+    border-radius: 8px;
+    border: none;
   }
   .cs-button-solid:hover:before {
+    border-radius: 8px;
+    border: none;
     width: 100%;
   }
   .cs-button-solid:before {
-    z-index: -1;
+    /* hover box */
+    content: "";
     position: absolute;
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
     top: 0;
     left: 0;
-    content: "";
-    opacity: 1;
-    display: block;
-    background-color: #000;
-    height: 100%;
-    width: 0;
+    z-index: -1;
     transition: width 0.3s;
+    border-radius: 8px;
   }
   .cs-hide-on-mobile {
     display: none;
@@ -463,6 +467,7 @@
     display: block;
   }
   #cs-navigation .cs-button-solid {
+    border-radius: 8px;
     display: none;
   }
   #cs-navigation:before {
@@ -1142,6 +1147,7 @@
     justify-content: center;
   }
   #footer .right-section .cs-button-solid {
+    border-radius: 8px;
     margin: 0;
     height: 3.3125rem;
     width: 15.625rem;
@@ -1242,6 +1248,6 @@
 /* Dark Mode */
 @media only screen and (min-width: 0rem) {
   body.dark-mode #footer {
-    background: #061623;
+    background-color: var(--dark);
   }
 }

@@ -62,47 +62,50 @@
 
     // Button - can be replaced using CodeStitch's "Button" Stitches
     .cs-button-solid {
-        z-index: 1;
-        position: relative;
-        display: inline-block;
-        background-color: var(--primary);
-        width: auto;
-        padding: 0 (30/16rem);
-        text-decoration: none;
-        text-transform: uppercase;
         font-size: (16/16rem);
-        line-height: (50/16em);
-        font-weight: bold;
-
-        // Transition Properties
-        color: #000;
-        transition: color 0.3s;
-        transition-delay: 0.1s;
-        text-align: center;
-
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 8vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        margin: 0;
+        color: #fff;
+        padding: 0 (24/16rem);
+        background-color: var(--primary);
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        border-radius: 8px;
+        border: none;
+    
         &:hover {
-            color: #fff;
+            border-radius: 8px;
+            border: none;
             &:before {
+                border-radius: 8px;
+                border: none;
                 width: 100%;
             }
         }
-
+    
         &:before {
-            z-index: -1;
+            /* hover box */
+            content: "";
             position: absolute;
+            display: block;
+            height: 100%;
+            width: 0%;
+            background: #000;
+            opacity: 1;
             top: 0;
             left: 0;
-            content: "";
-            opacity: 1;
-            display: block;
-            background-color: #000;
-            height: 100%;
-
-            //Transition properties
-            width: 0;
+            z-index: -1;
             transition: width 0.3s;
+            border-radius: 8px;
         }
     }
+    
+                                    
+                                    
 
     .cs-hide-on-mobile {
         display: none;
@@ -545,6 +548,7 @@
         }
 
         .cs-button-solid {
+            border-radius: 8px;
             display: none;
         }
 
@@ -1341,6 +1345,7 @@
             }
 
             .cs-button-solid {
+                border-radius: 8px;
                 margin: 0;
                 height: (53/16rem);
                 width: (250/16rem);
@@ -1469,7 +1474,8 @@
 @media only screen and (min-width: 0rem) {
     body.dark-mode {
         #footer {
-            background: #061623;
+            
+            background-color: var(--dark)
         }
     }
 }

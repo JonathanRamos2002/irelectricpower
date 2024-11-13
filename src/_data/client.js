@@ -1,16 +1,16 @@
 module.exports = {
-    "name": "Code Stitch Web Designs",
-    "email": "help@codestitch.app",
-    "phoneForTel": "555-779-4407",
-    "phoneFormatted": "(555) 779-4407",
+    "name": "IR Electric Power",
+    "email": "irelectricpower@gmail.com",
+    "phoneForTel": "240-281-1651",
+    "phoneFormatted": "(240) 281-1651",
     "address": {
-        "lineOne": "First Address Line",
-        "lineTwo": "Second Address Line",
-        "city": "Denver",
-        "state": "CO",
-        "zip": "80206",
+        "lineOne": "",
+        "lineTwo": "",
+        "city": "Burtonsville",
+        "state": "MD",
+        "zip": "20866",
         "country": "US",
-        "mapLink": "https://maps.app.goo.gl/TEdS5KoLC9ZcULuQ6"
+        "mapLink": "https://maps.app.goo.gl/oPGN8pk13JTVUNct7"
     },
     "socials": {
         "facebook": "https://www.facebook.com/",
